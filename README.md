@@ -22,8 +22,4 @@ Styled components from react styled components package. Site for more informatio
 https://styled-components.com/
 ```
 
-# Author
 
-Design and coded by myself.
-
-Lucas Boscariole Silva.
