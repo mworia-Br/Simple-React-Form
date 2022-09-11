@@ -82,7 +82,9 @@ const Contact = () => {
         maxLength='12'
       />
       <Container>
-        <p>Select a payment method:</p>
+        <p>Select a payment method:</p> 
+      </Container>
+      <Container>
         <label htmlFor='info'>Mpesa</label>
         <input
           type='checkbox'
@@ -103,7 +105,9 @@ const Contact = () => {
         />
       </Container>
       <Container>
-        <p>Select your location:</p>
+        <p>Select your location:</p> 
+      </Container>
+      <Container>
         <label htmlFor='info'>Nanyuki</label>
         <input
           type='checkbox'
@@ -162,6 +166,9 @@ const Contact = () => {
           name='other'
           id='other'
         />
+      </Container>
+      <Container>
+        <p>Enter a detailed location description:</p> 
       </Container>
       <label htmlFor='message'>Detailed Location</label>
       <textarea
