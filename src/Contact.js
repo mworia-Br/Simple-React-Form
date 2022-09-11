@@ -49,6 +49,9 @@ const Contact = () => {
   };
   return (
     <Wrapper onSubmit={handleSubmit}>
+      <h1>Congratulations!</h1>
+      <h2>You just made an order request to Finebody Works Lab.</h2>
+      <h3>Details you fill on the form will be used to deliver your package</h3>
       <label htmlFor='name'>Name</label>
       <input
         type='text'
