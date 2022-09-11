@@ -82,6 +82,7 @@ const Contact = () => {
         maxLength='12'
       />
       <Container>
+        <p>Select a payment method:</p>
         <label htmlFor='info'>Mpesa</label>
         <input
           type='checkbox'
@@ -102,6 +103,7 @@ const Contact = () => {
         />
       </Container>
       <Container>
+        <p>Select your location:</p>
         <label htmlFor='info'>Nanyuki</label>
         <input
           type='checkbox'
