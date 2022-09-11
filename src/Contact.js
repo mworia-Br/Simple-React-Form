@@ -6,9 +6,15 @@ const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
-  const [information, setInformation] = useState(false);
-  const [question, setQuestion] = useState(false);
-  const [message, setMessage] = useState('');
+  const [mpesa, setMpesa] = useState(false);
+  const [cash, setCash] = useState(false);
+  const [nanyuki, setNanyuki] = useState(false);
+  const [narumoru, setNarumoru] = useState(false);
+  const [meru, setMeru] = useState(false);
+  const [nyeri, setNyeri] = useState(false);
+  const [isiolo, setIsiolo] = useState(false);
+  const [other, setOther] = useState(false);
+  const [location, setLocation] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -17,17 +23,29 @@ const Contact = () => {
         name: name,
         email: email,
         phone: phone,
-        information: information,
-        question: question,
-        message: message,
+        mpesa: mpesa,
+        cash: cash,
+        nanyuki: nanyuki,
+        narumoru: narumoru,
+        meru: meru,
+        nyeri: nyeri,
+        isiolo: isiolo,
+        other: other,
+        location: location,
       })
       .catch((err) => console.log(err));
     setName('');
     setEmail('');
     setPhone('');
-    setInformation(false);
-    setQuestion(false);
-    setMessage('');
+    setMpesa(false);
+    setCash(false);
+    setNanyuki(false);
+    setNarumoru(false);
+    setMeru(false);
+    setNyeri(false);
+    setIsiolo(false);
+    setOther(false);
+    setLocation('');
   };
   return (
     <Wrapper onSubmit={handleSubmit}>
@@ -64,32 +82,92 @@ const Contact = () => {
         maxLength='12'
       />
       <Container>
-        <label htmlFor='info'>Information</label>
+        <label htmlFor='info'>Mpesa</label>
         <input
           type='checkbox'
-          checked={information}
-          onChange={(e) => setInformation(e.target.checked)}
-          name='info'
-          id='info'
+          checked={mpesa}
+          onChange={(e) => setMpesa(e.target.checked)}
+          name='mpesa'
+          id='mpesa'
         />
       </Container>
       <Container>
-        <label htmlFor='question'>Question</label>
+        <label htmlFor='info'>Cash</label>
         <input
           type='checkbox'
-          checked={question}
-          onChange={(e) => setQuestion(e.target.checked)}
-          name='question'
-          id='question'
+          checked={cash}
+          onChange={(e) => setCash(e.target.checked)}
+          name='cash'
+          id='cash'
         />
       </Container>
-      <label htmlFor='message'>Message</label>
+      <Container>
+        <label htmlFor='info'>Nanyuki</label>
+        <input
+          type='checkbox'
+          checked={nanyuki}
+          onChange={(e) => setNanyuki(e.target.checked)}
+          name='nanyuki'
+          id='nanyuki'
+        />
+      </Container>
+      <Container>
+        <label htmlFor='info'>Nyeri</label>
+        <input
+          type='checkbox'
+          checked={nyeri}
+          onChange={(e) => setNyeri(e.target.checked)}
+          name='nyeri'
+          id='nyeri'
+        />
+      </Container>
+      <Container>
+        <label htmlFor='info'>Meru</label>
+        <input
+          type='checkbox'
+          checked={meru}
+          onChange={(e) => setMeru(e.target.checked)}
+          name='meru'
+          id='meru'
+        />
+      </Container>
+      <Container>
+        <label htmlFor='info'>Isiolo</label>
+        <input
+          type='checkbox'
+          checked={isiolo}
+          onChange={(e) => setIsiolo(e.target.checked)}
+          name='isiolo'
+          id='isiolo'
+        />
+      </Container>
+      <Container>
+        <label htmlFor='info'>Narumoru</label>
+        <input
+          type='checkbox'
+          checked={narumoru}
+          onChange={(e) => setNarumoru(e.target.checked)}
+          name='narumoru'
+          id='narumoru'
+        />
+      </Container>
+      <Container>
+        <label htmlFor='info'>Other Towns</label>
+        <input
+          type='checkbox'
+          checked={other}
+          onChange={(e) => setOther(e.target.checked)}
+          name='other'
+          id='other'
+        />
+      </Container>
+      <label htmlFor='message'>Detailed Location</label>
       <textarea
-        name='message'
-        id='message'
-        placeholder='Type your message...'
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
+        name='location'
+        id='location'
+        placeholder='Estate, Street, Building, etc...'
+        value={location}
+        onChange={(e) => setLocation(e.target.value)}
         required
       ></textarea>
       <button type='subimt'>SUBMIT</button>
