@@ -182,7 +182,7 @@ const Contact = () => {
         onChange={(e) => setLocation(e.target.value)}
         required
       ></textarea>
-      <button type='subimt'>FINISH</button>
+      <Container><button type='subimt'>FINISH</button></Container>
     </Wrapper>
   );
 };
